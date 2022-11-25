@@ -2,39 +2,39 @@
 
 select * from sales;
 /*       ------OUTPUT ------
-|customer_id |	order_date	|product_id |
+|customer_id |	order_date  | product_id   |
 ------------ | ------------ | -----------
-|A	         |  2021-01-01  |	 1        |
-|A	         |  2021-01-01	|	 2        |
-|A	         |  2021-01-07	|	 2        |
-|A	         |	2021-01-10	|	 3        |
-|A	         |	2021-01-11	|	 3        |
-|A	         |	2021-01-11	|	 3        |
-|B	         |	2021-01-01	|	 2        |
-|B	         |	2021-01-02	|	 2        |
-|B	         |	2021-01-04	|	 1        |
-|B	         |	2021-01-11	|	 1        |
-|B	         |	2021-01-16	|	 3        |
-|B	         |	2021-02-01	|	 3        |
-|C	         |	2021-01-01	|	 3        |
-|C	         |	2021-01-01	|	 3        |
-|C	         |	2021-01-07	|	 3        |
+|A	     |  2021-01-01  |	 1        |
+|A	     |  2021-01-01  |	 2        |
+|A	     |  2021-01-07  |	 2        |
+|A	     |	2021-01-10  |	 3        |
+|A	     |	2021-01-11  |	 3        |
+|A	     |	2021-01-11  |	 3        |
+|B	     |	2021-01-01  |	 2        |
+|B	     |	2021-01-02  |	 2        |
+|B	     |	2021-01-04  |	 1        |
+|B	     |	2021-01-11  |	 1        |
+|B	     |	2021-01-16  |	 3        |
+|B	     |	2021-02-01  |	 3        |
+|C	     |	2021-01-01  |	 3        |
+|C	     |	2021-01-01  |	 3        |
+|C	     |	2021-01-07  |	 3        |
 */
 select * from members;
 /*     ------  OUTPUT -------
-|customer_id |	order_date	|product_id |
+|customer_id |	order_date  |product_id |
 ------------ | ------------ | -----------
-|A	         |  2021-01-01  |	 1        |
-|A	         |  2021-01-01	|	 2        |
-|A	         |  2021-01-07	|	 2        |
+|A	     |  2021-01-01  |	 1      |
+|A	     |  2021-01-01  |	 2      |
+|A	     |  2021-01-07  |	 2      |
 */
 select * from menu;
 /*     ------  OUTPUT -------
-|customer_id |	order_date	|product_id |
+|customer_id |	order_date  |product_id |
 ------------ | ------------ | -----------
-|A	         |  2021-01-01  |	 1        |
-|A	         |  2021-01-01	|	 2        |
-|A	         |  2021-01-07	|	 2        |
+|A	     |  2021-01-01  |	 1      |
+|A	     |  2021-01-01  |	 2      |
+|A	     |  2021-01-07  |	 2      |
 */
 
 
@@ -172,10 +172,10 @@ join sales s on s.product_id = mn.product_id
 /*The following questions are related creating basic data tables that Danny and his team can use to quickly derive insights without needing to join 
 the underlying tables using SQL.
 
-Q10. customer_id	order_date	product_name	price	member
-A	        2021-01-01	curry			15		N
-A	        2021-01-01	sushi			10		N
-A			2021-01-07	curry			15		Y
+Q10. customer_id	order_date	product_name	     price	     member
+A	                2021-01-01	curry			15		N
+A	                2021-01-01	sushi			10		N
+A	                2021-01-07	curry			15		Y
 A			2021-01-10	ramen			12		Y
 A			2021-01-11	ramen			12		Y
 A			2021-01-11	ramen			12		Y
