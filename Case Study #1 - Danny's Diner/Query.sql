@@ -1,4 +1,7 @@
-
+/* AUTHOR   - SANSKRITI GARG
+ Tool Used  - MYSQL Workbench 8.0 CE
+ Created on - Nov'2022*/
+ 
 
 select * from sales;
 /*       ------OUTPUT ------
@@ -37,6 +40,9 @@ select * from menu;
 |A	     |  2021-01-07  |	 2      |
 */
 
+--------------------------------------------------------------------------
+-- CASE STUDY QUESTIONS --
+-------------------------------------------------------------------------
 
 -- Q1.What is the total amount each customer spent at the restaurant?*/
 /* --------- SOLUTION --------- */
@@ -156,7 +162,26 @@ ORDER BY customer_id;
 
 
 /* Q9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - 
---how many points would each customer have?
+--how many points would each customer have?*/
+/* --------- SOLUTION --------- */
+WITH CTE AS
+(SELECT *,
+(CASE WHEN product_name = 'sushi' THEN price*20 
+	ELSE price*10
+END) as total_points
+FROM menu mn)
+
+SELECT DISTINCT s.customer_id, 
+SUM(c.total_points) OVER(PARTITION BY s.customer_id) as Total_points
+FROM sales s 
+JOIN CTE c on c.product_id = s.product_id
+ORDER BY 1;
+
+
+
+
+
+
 In the first week after a customer joins the program (including their join date) 
 they earn 2x points on all items, not just sushi - 
 how many points do customer A and B have at the end of January?
